@@ -23,6 +23,21 @@ spring:
               predicates:
                 - Path=/auth/**
 
+            - id: products
+              uri: http://product:8080
+              predicates:
+                - Path=/products/**
+
+            - id: orders
+              uri: http://order:8080
+              predicates:
+                - Path=/orders/**
+
+            - id: exchanges
+              uri: http://exchange:8000
+              predicates:
+                - Path=/exchanges/**
+
           globalcors:
             corsConfigurations:
               '[/**]':
